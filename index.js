@@ -9,30 +9,29 @@ const openai = new OpenAIApi(config);
 
 ////////// RANDOMIZER //////////
 
+const randomizer = (arr) => {
+    randomGenerator = Math.floor(Math.random() * arr.length)
+    return arr[randomGenerator];
+}
+
 const monstersArr = ["Lich", "Mind Flayer", "Goblin", "Dragon", "Ice Troll", "Necromancer"];
-const monsterGenerator = Math.floor(Math.random() * monstersArr.length);
-const monster = monstersArr[monsterGenerator];
+const monster = randomizer(monstersArr);
 
 const numOfCharactersArr = ["1", "2", "3", "4", "5"];
-const numOfCharactersGenerator = Math.floor(Math.random() * numOfCharactersArr.length);
-const numOfCharacters = numOfCharactersArr[numOfCharactersGenerator];
+const numOfCharacters = randomizer(numOfCharactersArr);
 
 const charactersArr = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard", "Artificer", "Blood Hunter"];
-const characterGenerator = Math.floor(Math.random() * charactersArr.length);
-const character = charactersArr[characterGenerator];
+randomizer(charactersArr);
 
 const deadlyEncountersArr = ["Easy", "Medium", "Hard", "Deadly", "Double Deadly", "Total Party Kill"];
-const deadlyEncountersGenerator = Math.floor(Math.random() * deadlyEncountersArr.length);
-const levelOfDeadliness = deadlyEncountersArr[deadlyEncountersGenerator];
+const levelOfDeadliness = randomizer(deadlyEncountersArr);
 
 //******** An appropriately equipped and well-rested party of four adventurers should be able to defeat a monster that has a challenge rating equal to its level without suffering any deaths. For example, a party of four 3rd-level characters should find a monster with a challenge rating of 3 to be a worthy challenge, but not a deadly one. ********\\
 const challengeRatingsArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
-const challengeRatingsGenerator = Math.floor(Math.random() * challengeRatingsArr.length);
-const challengeRatings = challengeRatingsArr[challengeRatingsGenerator];
+const challengeRatings = randomizer(challengeRatingsArr);
 
 const levelOfCharactersArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
-const levelOfCharactersGenerator = Math.floor(Math.random() * levelOfCharactersArr.length);
-const levelOfCharacters = levelOfCharactersArr[levelOfCharactersGenerator];
+const levelOfCharacters = randomizer(levelOfCharactersArr);
 
 // ======================= \\
 
